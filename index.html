@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+
+    <form>
+       
+        <table class="calculator" cellspacing="0" cellpadding="1">
+
+            <tr>
+                <p class="calcu">SCIENTIFIC CALCULATOR</p>
+            </tr>
+
+            <tr>
+                <td colspan="5"><input id="display" name="display" value="0" size="28" maxlength="25"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" class="btn" value="cos"
+                        onclick="if(triogonometricRation(this.form.display.value)) { cos(this.form) }"></td>
+                <td><input type="button" class="btn" value="sin"
+                        onclick="if(triogonometricRation(this.form.display.value)) { sin(this.form) }"></td>
+                <td><input type="button" class="btn" value="tan"
+                        onclick="if(triogonometricRation(this.form.display.value)) { tan(this.form) }"></td>
+                <td><input type="button" class="btn" value="&#960;"
+                        onclick="addChar(this.form.display,'3.14159265359')"></td>
+                <td><input type="button" class="btn" value="%" onclick=" percent(this.form.display)"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" class="btn" value="7" onclick="addChar(this.form.display, '7')"></td>
+                <td><input type="button" class="btn" value="8" onclick="addChar(this.form.display, '8')"></td>
+                <td><input type="button" class="btn" value="9" onclick="addChar(this.form.display, '9')"></td>
+                <td><input type="button" class="btn" value="x&#94;"
+                        onclick="if(triogonometricRation(this.form.display.value)) { exp(this.form) }"></td>
+                <td><input type="button" class="btn" value="/" onclick="addChar(this.form.display, '/')"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" class="btn" value="4" onclick="addChar(this.form.display, '4')"></td>
+                <td><input type="button" class="btn" value="5" onclick="addChar(this.form.display, '5')"></td>
+                <td><input type="button" class="btn" value="6" onclick="addChar(this.form.display, '6')"></td>
+                <td><input type="button" class="btn" value="ln"
+                        onclick="if(triogonometricRation(this.form.display.value)) { ln(this.form) }"></td>
+                <td><input type="button" class="btn" value="x" onclick="addChar(this.form.display, '*')"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" class="btn" value="1" onclick="addChar(this.form.display, '1')"></td>
+                <td><input type="button" class="btn" value="2" onclick="addChar(this.form.display, '2')"></td>
+                <td><input type="button" class="btn" value="3" onclick="addChar(this.form.display, '3')"></td>
+                <td><input type="button" class="btn" value="&radic;"
+                        onclick="if(triogonometricRation(this.form.display.value)) { sqrt(this.form) }"></td>
+                <td><input type="button" class="btn" name="btnMath" value="-" onclick="addChar(this.form.display, '-')">
+                </td>
+            </tr>
+
+            <tr>
+                <td><input type="button" class="btn" value="&#177" onclick="changeSign(this.form.display)"></td>
+                <td><input type="button" class="btn" value="0" onclick="addChar(this.form.display, '0')"></td>
+                <td><input type="button" class="btn" value="&#46;" onclick="addChar(this.form.display, '&#46;')"></td>
+                <td><input type="button" class="btn" value="x&#50;"
+                        onclick="if(triogonometricRation(this.form.display.value)) { square(this.form) }"></td>
+                <td><input type="button" class="btn" value="+" onclick="addChar(this.form.display, '+')"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" class="btn" value="(" onclick="addChar(this.form.display, '(')"></td>
+                <td><input type="button" class="btn" value=")" onclick="addChar(this.form.display,')')"></td>
+                <td><input type="button" class="btn" value="Clear" onclick="this.form.display.value= 0 "></td>
+                <td><input type="button" class="btn" value="Back" onclick="deleteChar(this.form.display)"></td>
+                <td><input type="button" class="btn" value="="
+                        onclick="if(triogonometricRation(this.form.display.value)) { compute(this.form) }"></td>
+            </tr>
+
+            <tr>
+                <p class="madeBy">MADE BY: MALIK FAIZAN</p>
+            </tr>
+
+            </tabel>
+
+    </form>
+
+</body>
+
+<script src="app.js"></script>
+
+</html>
